@@ -1,17 +1,47 @@
+"use client";
 import Link from "next/link";
+import NavLink from "./NavLink";
+import NavLinkIcon from "./NavLinkIcon";
 
 const Navbar = () => {
   return (
-    <nav>
-      <div className="container">
-        <Link href="/">Logo</Link>
+    <nav className="bg-primary_color text-white py-3">
+      <div className="container flex justify-between items-center">
+        <Link href="/" className="font-semibold text-3xl">
+          Logo
+        </Link>
 
-        <ul>
-          <li className="">Home</li>
+        <ul className="flex items-center gap-7 text-base font-medium">
+          <li className="flex items-center gap-2 group">
+            <NavLink text="Home" path="/" />
+          </li>
+          <li className="flex items-center gap-1 group">
+            <NavLink text="Hosting" path="#" />
+            <NavLinkIcon />
+          </li>
+          <li className="flex items-center gap-1 group">
+            <NavLink text="Domain" path="#" />
+            <NavLinkIcon />
+          </li>
+          <li className="flex items-center gap-1 group">
+            <NavLink text="Technology" path="#" />
+            <NavLinkIcon />
+          </li>
+          <li className="flex items-center gap-1 group">
+            <NavLink text="Help Center" path="#" />
+            <NavLinkIcon />
+          </li>
+          <li className="flex items-center gap-1 group">
+            <NavLink text="Others" path="#" />
+            <NavLinkIcon />
+          </li>
         </ul>
 
-        <div>
-          <Link href="/Login">
+        <div className="flex items-center gap-8">
+          <Link
+            href="/Login"
+            className="flex items-center font-medium text-base gap-1"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -28,7 +58,7 @@ const Navbar = () => {
             </svg>
             <span>Login</span>
           </Link>
-          <button></button>
+          <button className="btn-outline">Get Started</button>
         </div>
       </div>
     </nav>

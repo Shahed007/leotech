@@ -1,7 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
+@layer components {
+  .btn-outline {
+    @apply px-7 py-3 border border-white rounded-md bg-transparent font-semibold text-white text-base duration-200 hover:bg-btn_hover_color hover:border-btn_hover_color;
+  }
+  .nav-link {
+    @apply after:block after:h-[2px]   after:bg-white w-full after:-translate-x-full hover:after:translate-x-0  after:w-full duration-300 overflow-hidden flex flex-col  after:duration-500;
+  }
+  .active-link {
+    @apply after:block after:h-[2px]   after:bg-white after:w-full;
+  }
+}

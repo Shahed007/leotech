@@ -25,6 +25,7 @@ const config: Config = {
       colors: {
         primary_color: "#045DDE",
         secondary_color: "#0245CA",
+        btn_hover_color: "#FFC107",
       },
     },
   },
