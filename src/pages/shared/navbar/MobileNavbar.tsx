@@ -1,10 +1,14 @@
 "use client";
-import { HelpCenter, domainDropDown, hostingMegaMenu, othersMegaMenu, technologyDropDown } from "@/utility/navar_menu";
+import {
+  HelpCenter,
+  domainDropDown,
+  hostingMegaMenu,
+  othersMegaMenu,
+  technologyDropDown,
+} from "@/utility/navar_menu";
 import Link from "next/link";
 import React, { useState } from "react";
-import NavLinkIcon from "./NavLinkIcon";
 import MobileDropDown from "./MobileDropDown";
-import DropDownMenu from "./DropDownMenu";
 import MobileDropDown2 from "./MobileDropDown2";
 
 const MobileNavbar = ({
@@ -19,12 +23,13 @@ const MobileNavbar = ({
   const handleDropDown = (idx: number) => {
     setOpen((prev) => (prev === idx ? null : idx));
   };
+
   return (
     <>
       <aside
         className={`${
-          isOpen ? "translate-x-0" : ""
-        }  fixed translate-x-full duration-500 z-20 transition-transform top-0 right-0 min-h-dvh bg-primary_color border-l border-secondary_color shadow-md  w-[300px]`}
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }  fixed  duration-500 z-20 transition-transform top-0 right-0 min-h-dvh bg-primary_color border-l border-secondary_color shadow-md  w-[300px]`}
       >
         <div className="flex justify-start mb-10 p-2">
           <button

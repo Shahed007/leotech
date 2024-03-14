@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import NavLinkIcon from "./NavLinkIcon";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 type DropDownProps = {
   title: string;
@@ -23,7 +24,8 @@ const MobileDropDown: React.FC<DropDownProps> = ({
   handleDropDown,
   open,
 }) => {
-  const maxHeight = open === menuNumber ? `${item.length * 60}px` : "0px";
+  const pathName = usePathname();
+  const maxHeight = open === menuNumber ? `${item.length * 70}px` : "0px";
   return (
     <li className=" ">
       <div
@@ -40,7 +42,12 @@ const MobileDropDown: React.FC<DropDownProps> = ({
         <ul className="flex flex-col gap-3 py-4">
           {item.map((subItem, idx) => (
             <li key={idx}>
-              <Link href={subItem.path} className="flex items-center gap-2">
+              <Link
+                href={subItem.path}
+                className={`flex items-center gap-2 ${
+                  `/${subItem.path}` === pathName
+                } ? 'border border-secondary_color shadow-sm p-1 rounded':''`}
+              >
                 <div className={`${subItem.icon ? "block" : "hidden"}`}>
                   <Image src={subItem.icon} alt={subItem.name} />
                 </div>

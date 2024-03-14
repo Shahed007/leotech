@@ -82,7 +82,10 @@ const Navbar = () => {
               <span>Login</span>
             </Link>
             <button className="btn-outline xl:block hidden">Get Started</button>
-            <button onClick={handleOpen} className="p-2 duration-300 active:scale-95 bg-primary_color shadow-sm border rounded-md border-secondary_color">
+            <button
+              onClick={handleOpen}
+              className="p-2 lg:hidden block duration-300 active:scale-95 bg-primary_color shadow-sm border rounded-md border-secondary_color"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
