@@ -1,5 +1,10 @@
-import Image from "next/image";
+import Hero from "@/pages/home/Hero";
 
 export default function Home() {
-  return <main>This home page</main>;
+  return (
+    <>
+      <Hero />
+      <main className="font-inter">This home page</main>
+    </>
+  );
 }

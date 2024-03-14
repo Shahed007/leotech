@@ -21,3 +21,8 @@
     @apply before:h-[2px] before:w-[20px] before:block;
   }
 }
+
+/* Home page Style */
+.hero-section {
+  height: calc(100dvh - 76px);
+}

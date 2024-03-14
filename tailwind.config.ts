@@ -20,14 +20,14 @@ const config: Config = {
         padding: "0 20px",
       },
       fontFamily: {
-        plusJakarta: '"Plus Jakarta Sans", sans-serif',
+        inter: ["var(--font-inter)"],
+        jakarta: ["var(--font-jakarta)"],
       },
       colors: {
         primary_color: "#045DDE",
         secondary_color: "#0245CA",
         btn_hover_color: "#FFC107",
         text_color: "#4c5671",
-        
       },
     },
   },

@@ -32,7 +32,7 @@ const MobileDropDown: React.FC<DropDownProps> = ({
         onClick={() => handleDropDown(menuNumber)}
         className="flex cursor-pointer justify-between items-center border-b border-gray-400 pb-1"
       >
-        <Link href="#">{title}</Link>
+        <button>{title}</button>
         <NavLinkIcon />
       </div>
       <div
