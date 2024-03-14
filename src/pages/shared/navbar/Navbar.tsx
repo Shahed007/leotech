@@ -8,7 +8,13 @@ import hostingIcon3 from "@/assets/hostingDropDown/24.svg";
 import hostingIcon4 from "@/assets/hostingDropDown/26.svg";
 import hostingIcon5 from "@/assets/hostingDropDown/25.svg";
 import hostingIcon6 from "@/assets/hostingDropDown/27.svg";
-import Image from "next/image";
+import DropDownMenu from "./DropDownMenu";
+import MegaMenu from "./MegaMenu";
+import MegaMenu2 from "./MegaMenu2";
+import other1 from "@/assets/outherMegaMenu/01-1.svg";
+import other2 from "@/assets/outherMegaMenu/08.svg";
+import other3 from "@/assets/outherMegaMenu/16.svg";
+import other4 from "@/assets/outherMegaMenu/21.svg";
 
 const Navbar = () => {
   return (
@@ -25,47 +31,27 @@ const Navbar = () => {
           <li className="flex  items-center gap-1 group relative">
             <NavLink text="Hosting" path="#" />
             <NavLinkIcon />
-            <div className="absolute top-6 duration-500 h-0 overflow-hidden  group-hover:h-auto group-hover:overflow-auto left-0 w-[770px] bg-transparent transition-all ease-in-out">
-              <div className="p-4 text-black grid grid-cols-2 h-0 group-hover:h-auto duration-1000 bg-white rounded-md mt-7 shadow border">
-                {hostingDropDown.map((item, idx) => (
-                  <Link href={item.path} key={idx}>
-                    <div className="flex items-center gap-3 p-4 duration-500 transition-all hover:shadow-sm rounded-md border border-transparent hover:border-gray-300">
-                      <div className="w-[12%]">
-                        <Image
-                          className="h-full w-full"
-                          src={item.icon}
-                          alt={item.name}
-                        />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="font-medium text-base text-black">
-                          {item.name}
-                        </h3>
-                        <p className="font-normal text-sm text-gray-500">
-                          {item.tag}
-                        </p>
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
+            <MegaMenu mega={hostingMegaMenu} />
           </li>
-          <li className="flex items-center gap-1 group">
+          <li className="flex items-center gap-1 group relative">
             <NavLink text="Domain" path="#" />
             <NavLinkIcon />
+            <DropDownMenu menu={domainDropDown} />
           </li>
-          <li className="flex items-center gap-1 group">
+          <li className="flex items-center gap-1 group relative">
             <NavLink text="Technology" path="#" />
             <NavLinkIcon />
+            <DropDownMenu menu={technologyDropDown} />
           </li>
-          <li className="flex items-center gap-1 group">
+          <li className="flex items-center gap-1 group relative">
             <NavLink text="Help Center" path="#" />
             <NavLinkIcon />
+            <DropDownMenu menu={HelpCenter} />
           </li>
-          <li className="flex items-center gap-1 group">
+          <li className="flex items-center gap-1 group relative">
             <NavLink text="Others" path="#" />
             <NavLinkIcon />
+            <MegaMenu2 mega={othersMegaMenu} />
           </li>
         </ul>
 
@@ -99,15 +85,7 @@ const Navbar = () => {
 
 export default Navbar;
 
-/* 
-About Us
-Hosting
-Domain
-Technology
-Help Center
-*/
-
-const hostingDropDown: {
+const hostingMegaMenu: {
   name: string;
   path: string;
   icon: string;
@@ -148,5 +126,84 @@ const hostingDropDown: {
     tag: "Manage Cloud Hosting",
     path: "cloud-hosting",
     icon: hostingIcon6,
+  },
+];
+const othersMegaMenu: {
+  name: string;
+  path: string;
+  icon: string;
+  tag: string;
+}[] = [
+  {
+    name: "About Us",
+    tag: "Get Know About Leo Technology",
+    path: "about-us",
+    icon: other1,
+  },
+  {
+    name: "Support",
+    tag: "Provide detailed explain",
+    path: "support",
+    icon: other2,
+  },
+  {
+    name: "Contact",
+    tag: "Contact with Leo Technology",
+    path: "contact",
+    icon: other3,
+  },
+  {
+    name: "Maintenance",
+    tag: "We will be soon",
+    path: "maintenance",
+    icon: other4,
+  },
+];
+
+const domainDropDown: { name: string; path: string }[] = [
+  {
+    name: "Domain Checker",
+    path: "domain-checker",
+  },
+  {
+    name: "Domain Transfer",
+    path: "domain-transfer",
+  },
+  {
+    name: "Domain Register",
+    path: "domain-register",
+  },
+  {
+    name: "Whois",
+    path: "whois",
+  },
+];
+
+const technologyDropDown: { name: string; path: string }[] = [
+  {
+    name: "Technology",
+    path: "technology",
+  },
+  {
+    name: "Data Center",
+    path: "data-center",
+  },
+];
+const HelpCenter: { name: string; path: string }[] = [
+  {
+    name: "FAQ",
+    path: "faq",
+  },
+  {
+    name: "Support",
+    path: "support",
+  },
+  {
+    name: "Contact",
+    path: "contact",
+  },
+  {
+    name: "Knowledgebase",
+    path: "Knowledgebase",
   },
 ];

@@ -14,4 +14,10 @@
   .active-link {
     @apply after:block after:h-[2px]   after:bg-white after:w-full;
   }
+  .subNav-link {
+    @apply before:h-[2px] before:w-0 hover:before:w-[20px] before:duration-300 before:block before:bg-text_color flex items-center gap-1;
+  }
+  .active-subNav-link {
+    @apply before:h-[2px] before:w-[20px] before:block;
+  }
 }
