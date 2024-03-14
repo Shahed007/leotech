@@ -1,4 +1,11 @@
-import React from "react";
+"use client";
+import { HelpCenter, domainDropDown, hostingMegaMenu, othersMegaMenu, technologyDropDown } from "@/utility/navar_menu";
+import Link from "next/link";
+import React, { useState } from "react";
+import NavLinkIcon from "./NavLinkIcon";
+import MobileDropDown from "./MobileDropDown";
+import DropDownMenu from "./DropDownMenu";
+import MobileDropDown2 from "./MobileDropDown2";
 
 const MobileNavbar = ({
   isOpen,
@@ -7,6 +14,11 @@ const MobileNavbar = ({
   isOpen: boolean;
   handleOpen: () => void;
 }) => {
+  const [open, setOpen] = useState<null | number>(null);
+
+  const handleDropDown = (idx: number) => {
+    setOpen((prev) => (prev === idx ? null : idx));
+  };
   return (
     <>
       <aside
@@ -14,7 +26,7 @@ const MobileNavbar = ({
           isOpen ? "translate-x-0" : ""
         }  fixed translate-x-full duration-500 z-20 transition-transform top-0 right-0 min-h-dvh bg-primary_color border-l border-secondary_color shadow-md  w-[300px]`}
       >
-        <div className="flex justify-start mb-4 p-2">
+        <div className="flex justify-start mb-10 p-2">
           <button
             onClick={handleOpen}
             className="text-white rounded active:scale-95 duration-300 p-2 bg-primary_color outline-none border border-secondary_color shadow-sm"
@@ -35,6 +47,46 @@ const MobileNavbar = ({
             </svg>
           </button>
         </div>
+        <ul className="text-white text-base font-medium px-5 gap-4 flex flex-col ">
+          <li className="border-b border-gray-400 pb-1">
+            <Link href="/">Home</Link>
+          </li>
+          <MobileDropDown
+            title="Hosting"
+            menuNumber={1}
+            item={hostingMegaMenu}
+            open={open}
+            handleDropDown={handleDropDown}
+          />
+          <MobileDropDown2
+            title="Domain"
+            menuNumber={2}
+            item={domainDropDown}
+            open={open}
+            handleDropDown={handleDropDown}
+          />
+          <MobileDropDown2
+            title="Technology"
+            menuNumber={3}
+            item={technologyDropDown}
+            open={open}
+            handleDropDown={handleDropDown}
+          />
+          <MobileDropDown2
+            title="Help Center"
+            menuNumber={4}
+            item={HelpCenter}
+            open={open}
+            handleDropDown={handleDropDown}
+          />
+          <MobileDropDown
+            title="Others"
+            menuNumber={5}
+            item={othersMegaMenu}
+            open={open}
+            handleDropDown={handleDropDown}
+          />
+        </ul>
       </aside>
       <div
         onClick={handleOpen}
