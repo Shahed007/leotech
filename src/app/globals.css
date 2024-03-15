@@ -24,5 +24,10 @@
 
 /* Home page Style */
 .hero-section {
-  height: calc(100dvh - 76px);
+  height: 100dvh;
+}
+
+/* Hero Section Title */
+.hero-title {
+  font-size: clamp(2rem, 4vw, 4rem);
 }

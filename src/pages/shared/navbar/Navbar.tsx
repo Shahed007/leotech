@@ -23,7 +23,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <nav className="bg-primary_color text-white py-3  px-5 font-inter z-[200] relative">
+      <nav className=" text-white py-3  px-5 font-inter z-[200] absolute top-0 left-0 w-full">
         <div className="container flex justify-between items-center">
           <Link href="/" className="font-semibold text-3xl">
             Logo
