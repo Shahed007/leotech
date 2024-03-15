@@ -29,7 +29,7 @@ const MobileNavbar = ({
       <aside
         className={`${
           isOpen ? "translate-x-0" : "translate-x-full"
-        }  fixed  duration-500 z-20 font-inter transition-transform top-0 right-0 min-h-dvh bg-primary_color border-l border-secondary_color shadow-md  w-[300px]`}
+        }  fixed  duration-500 z-[300] font-inter transition-transform top-0 right-0 min-h-dvh bg-primary_color border-l border-secondary_color shadow-md  w-[300px]`}
       >
         <div className="flex justify-start mb-10 p-2">
           <button

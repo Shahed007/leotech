@@ -24,7 +24,7 @@ const DomainChecker = () => {
   };
   return (
     <div className="relative z-30 max-w-4xl mx-auto">
-      <div className=" flex items-center mt-12 mb-10">
+      <div className=" flex items-center mt-7 md:mt-12 mb-8 md:mb-10">
         <input
           className="block w-full focus:duration-200 transition-all border-[2px] focus-within:border-btn_hover_color border-transparent focus:outline-none px-3 py-3 rounded-l-md bg-white"
           type="text"
@@ -80,13 +80,18 @@ const DomainChecker = () => {
           Search
         </button>
       </div>
-      <div className="font-jakarta text-white flex items-center gap-3 justify-center">
-        <h4 className="font-medium">Popular Domain:</h4>
-        <div className="flex gap-3 flex-wrap">
+      <div className="font-jakarta text-white   flex sm:items-center sm:flex-row flex-col gap-3 sm:justify-center">
+        <h4 className="font-medium  lg:w-[25%] xl:w-auto">Popular Domain:</h4>
+        <div className="flex gap-3 flex-wrap  lg:flex-1 xl:flex-initial">
           {domainName.map((item, idx) => (
             <p
+              onClick={() => handleCheckDomain(item.name)}
               key={idx}
-              className="bg-white/10 backdrop-blur-sm border border-gray-300 flex gap-1 py-1 rounded-lg px-3"
+              className={` ${
+                item.name === name
+                  ? "bg-secondary_color/40"
+                  : "hover:bg-secondary_color/40 bg-white/10"
+              } duration-200  cursor-pointer backdrop-blur-sm border border-gray-300 flex gap-1 py-1 rounded-lg px-3`}
             >
               <span className="font-bold">{item.name}</span>
               <span className="font-medium">${item.price}</span>

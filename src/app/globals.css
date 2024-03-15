@@ -20,6 +20,9 @@
   .active-subNav-link {
     @apply before:h-[2px] before:w-[20px] before:block;
   }
+  .custom-container{
+    @apply container px-5 lg:px-10 xl:px-0;
+  }
 }
 
 /* Home page Style */
@@ -29,5 +32,5 @@
 
 /* Hero Section Title */
 .hero-title {
-  font-size: clamp(2rem, 4vw, 4rem);
+  font-size: clamp(2rem, 4vw, 3.5rem);
 }

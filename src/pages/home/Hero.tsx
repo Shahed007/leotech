@@ -10,7 +10,7 @@ const Hero = () => {
         className="absolute object-cover top-0 left-0 w-full h-full z-10"
       />
       <div className="bg-primary_color/85 z-20 absolute top-0 left-0 w-full h-full"></div>
-      <div className="container">
+      <div className="custom-container">
         <div className="relative  z-30">
           <div className="text-center">
             <h1 className="font-jakarta font-bold text-white hero-title ">
