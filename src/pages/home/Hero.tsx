@@ -11,6 +11,16 @@ const Hero = () => {
       />
       <div className="bg-primary_color/85 z-20 absolute top-0 left-0 w-full h-full"></div>
       <div className="container">
+        <div className="relative  z-30">
+          <div className="text-center">
+            <h1 className="font-jakarta font-bold text-white hero-title ">
+              Find Your Perfect Domain Name
+            </h1>
+            <p className="text-base font-jakarta text-white">
+              Web Hosting, Domain Name and Hosting Center Solutions
+            </p>
+          </div>
+        </div>
         <DomainChecker />
       </div>
     </header>

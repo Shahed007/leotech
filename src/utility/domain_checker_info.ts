@@ -1,4 +1,4 @@
-const domainName = [
+const domainName: { name: string; price: number }[] = [
   {
     name: ".com",
     price: 6.19,
@@ -21,6 +21,14 @@ const domainName = [
   },
 ];
 
-const domains = [".com", ".net", ".love", ".pw", ".org", ".info", ".xyz"];
+const domains: string[] = [
+  ".com",
+  ".net",
+  ".love",
+  ".pw",
+  ".org",
+  ".info",
+  ".xyz",
+];
 
 export { domainName, domains };
