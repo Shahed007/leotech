@@ -23,7 +23,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <nav className=" text-white py-3   font-inter z-[200] absolute top-0 left-0 w-full">
+      <nav className=" text-white py-3   font-inter z-[100] absolute top-0 left-0 w-full">
         <div className="custom-container flex justify-between items-center">
           <Link href="/" className="font-semibold text-3xl">
             Logo

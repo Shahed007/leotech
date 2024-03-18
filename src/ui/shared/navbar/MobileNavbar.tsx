@@ -1,4 +1,3 @@
-
 import {
   HelpCenter,
   domainDropDown,
@@ -95,7 +94,7 @@ const MobileNavbar = ({
       </aside>
       <div
         onClick={handleOpen}
-        className={`z-10 bg-gray-700/50 cursor-pointer ease-in duration-300 transition-transform  h-dvh w-dvw fixed top-0 right-0 ${
+        className={`z-[200] bg-gray-700/50 cursor-pointer ease-in duration-300 transition-transform  h-dvh w-dvw fixed top-0 right-0 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       ></div>
