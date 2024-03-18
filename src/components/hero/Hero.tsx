@@ -1,7 +1,13 @@
 import heroBg from "@/assets/home/hero-background-image.jpg";
 import DomainChecker from "@/components/domainChecker/DomainChecker";
 import Image from "next/image";
-const Hero = () => {
+const Hero = ({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) => {
   return (
     <header className="font-inter overflow-visible relative hero-section flex justify-center items-center">
       <Image
@@ -14,11 +20,9 @@ const Hero = () => {
         <div className="relative  z-30">
           <div className="text-center">
             <h1 className="font-jakarta font-bold text-white hero-title ">
-              Find Your Perfect Domain Name
+              {title}
             </h1>
-            <p className="text-base font-jakarta text-white">
-              Web Hosting, Domain Name and Hosting Center Solutions
-            </p>
+            <p className="text-base font-jakarta text-white">{description}</p>
           </div>
         </div>
         <DomainChecker />

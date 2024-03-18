@@ -61,7 +61,7 @@ const DomainChecker = () => {
             initial="close"
             animate={isOpen ? "open" : "close"}
             transition={{ duration: 0.2 }}
-            className={`absolute duration-500 transition-all shadow-sm border border-x-secondary_color w-[60px] sm:min-w-[300px] z-30 top-14 right-0 flex sm:flex-row flex-col  gap-0 sm:gap-3 rounded-md  bg-secondary_color/80 text-white `}
+            className={`absolute duration-500 transition-all shadow-sm border border-x-secondary_color w-[60px] sm:min-w-[410px] z-30 top-14 right-0 flex sm:flex-row flex-col  gap-0 sm:gap-3 rounded-md  bg-secondary_color/80 text-white `}
           >
             {domains.map((item, idx) => (
               <li
