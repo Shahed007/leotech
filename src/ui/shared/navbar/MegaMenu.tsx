@@ -8,11 +8,9 @@ type MegaType = {
   icon: string;
 }[];
 
-interface MegaProps {
-  mega: MegaType;
-}
 
-const MegaMenu: React.FC<MegaProps> = ({ mega }) => {
+
+const MegaMenu = ({ mega } : {mega: MegaType}) => {
   return (
     <div className="absolute top-6 duration-500 h-0 overflow-hidden  group-hover:h-auto group-hover:overflow-auto left-0 w-[770px] bg-transparent transition-all ease-in-out">
       <div className="p-4 text-black grid grid-cols-2 h-0 group-hover:h-auto duration-1000 bg-white rounded-md mt-7 shadow border">

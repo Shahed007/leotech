@@ -1,4 +1,5 @@
-import Hero from "@/pages/home/Hero";
+import Hero from "@/ui/home/Hero";
+
 
 export default function Home() {
   return (

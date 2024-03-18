@@ -5,11 +5,7 @@ type DropDownMenuType = {
   path: string;
 }[];
 
-interface DropDownMenuProps {
-  menu: DropDownMenuType;
-}
-
-const DropDownMenu: React.FC<DropDownMenuProps> = ({ menu }) => {
+const DropDownMenu = ({ menu }: { menu: DropDownMenuType }) => {
   return (
     <div className="absolute top-6 h-0 overflow-hidden group-hover:h-auto group-hover:overflow-auto w-[200px] bg-transparent">
       <div className="p-4 transition-all duration-500 bg-white shadow-sm border border-gray-300 rounded-md mt-7">

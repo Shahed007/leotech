@@ -13,13 +13,8 @@ type DropDownProps = {
   }[];
 };
 
-const MobileDropDown2: React.FC<DropDownProps> = ({
-  title,
-  menuNumber,
-  item,
-  handleDropDown,
-  open,
-}) => {
+const MobileDropDown2 = ({ menuNumber, handleDropDown, item, open, title }:  DropDownProps ) => {
+  
   const maxHeight = open === menuNumber ? `${item.length * 48}px` : "0px";
   return (
     <li className=" ">

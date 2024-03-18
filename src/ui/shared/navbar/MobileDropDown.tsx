@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 import NavLinkIcon from "./NavLinkIcon";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -17,13 +16,8 @@ type DropDownProps = {
   }[];
 };
 
-const MobileDropDown: React.FC<DropDownProps> = ({
-  title,
-  menuNumber,
-  item,
-  handleDropDown,
-  open,
-}) => {
+const MobileDropDown = ({ title, menuNumber, open, handleDropDown, item }:   DropDownProps ) => {
+
   const pathName = usePathname();
   const maxHeight = open === menuNumber ? `${item.length * 70}px` : "0px";
   return (
