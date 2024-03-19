@@ -12,7 +12,14 @@ import "swiper/css";
 import Image from "next/image";
 const ServiceHolder = () => {
   return (
-    <Swiper spaceBetween={50} slidesPerView={6} loop={true}>
+    <Swiper spaceBetween={50} slidesPerView={3} loop={true}
+    breakpoints={{
+      
+      1280:{
+        slidesPerView: 6,
+      }
+    }}
+    >
       {brands.map((item, idx) => (
         <SwiperSlide key={idx}>
           <Image src={item} alt={`brand ${idx}`} />

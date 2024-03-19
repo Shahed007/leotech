@@ -28,6 +28,15 @@
   }
 }
 
+.card-shadow {
+  
+  box-shadow: 6px 6px 12px #cecece, -6px -6px 12px #f2f2f2;
+}
+
+.card-gradient{
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+
 /* Home page Style */
 .hero-section {
   height: 100dvh;
@@ -37,3 +46,4 @@
 .hero-title {
   font-size: clamp(2rem, 4vw, 3.5rem);
 }
+
