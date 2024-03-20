@@ -1,0 +1,44 @@
+[
+  {
+    "category": "SSD Shared",
+    "description": "Everything you need to create your website",
+    "price": 300,
+    "main_features": {
+      "storage": ["1000 MB", "SSD Shared"],
+      "bandWidth": ["1000 MB", "Bandwidth Monthly"],
+      "support": ["24/7", "Support"],
+      "email": "Unlimited Email Address",
+      "ssl": "Free SSL Certificate",
+      "freeDomain": "Free Domain ($9.99 value)"
+    }
+  },
+  {
+    "category": "Reseller Hosting",
+    "description": "Custom Plans for Making Money",
+    "price": 4000,
+    "main_features": {
+      "storage": ["40 GB", "Disk Space"],
+      "domain": "Unlimited Domains",
+      "dataTransfer": ["500 GB", "Data Transfer"],
+      "support": ["24/7", "Support"],
+      "security": "Free CDN & Security",
+      "dataBase": "Unlimited MySQL Database"
+    }
+  },
+  {
+    "category": "Wordpress Hosting",
+    "description": "Custom Plans for Making Money",
+    "price": 550,
+    "main_features": {
+      "storage": ["5 GB", "Wordpress hosting"],
+      "bandWidth": ["5000 MB", "Bandwidth Monthly"],
+      "support": ["24/7", "Support"],
+      "email": "Unlimited Email Address",
+      "ssl": "Free SSL Certificate",
+      "freeDomain": "Free Domain ($9.99 value)",
+      "security": ["Free", "1-click WordPress Installation"],
+      "speed": "WordPress Acceleration (LiteSpeed)"
+    }
+  }
+]
+

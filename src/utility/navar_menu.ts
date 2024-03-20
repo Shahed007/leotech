@@ -4,6 +4,8 @@ import hostingIcon3 from "@/assets/hostingDropDown/24.svg";
 import hostingIcon4 from "@/assets/hostingDropDown/26.svg";
 import hostingIcon5 from "@/assets/hostingDropDown/25.svg";
 import hostingIcon6 from "@/assets/hostingDropDown/27.svg";
+import hostingIcon7 from "@/assets/icons/cloud-data.png";
+import hostingIcon8 from "@/assets/icons/vr.png";
 import other1 from "@/assets/outherMegaMenu/01-1.svg";
 import other2 from "@/assets/outherMegaMenu/08.svg";
 import other3 from "@/assets/outherMegaMenu/16.svg";
@@ -45,6 +47,18 @@ const hostingMegaMenu: {name: string, tag: string, path: string, icon: string}[]
     tag: "Manage Cloud Hosting",
     path: "cloud-hosting",
     icon: hostingIcon6,
+  },
+  {
+    name: "Dedicated Server",
+    tag: "Your site, our dedication",
+    path: "dedicated-hosting",
+    icon: hostingIcon7,
+  },
+  {
+    name: "Virtual Server",
+    tag: "Dedicated. Virtual. Scalable Solutions",
+    path: "virtual-server",
+    icon: hostingIcon8,
   },
 ];
 const othersMegaMenu: {name: string, tag: string, path: string, icon: string}[] = [

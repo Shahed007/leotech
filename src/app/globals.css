@@ -26,6 +26,9 @@
   .section-padding {
     @apply lg:py-[120px] md:py-20 py-[60px];
   }
+  .section-title{
+    @apply section-title-font-size font-bold font-jakarta text-text_color;
+  }
 }
 
 .card-shadow {
@@ -45,5 +48,9 @@
 /* Hero Section Title */
 .hero-title {
   font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.section-title-font-size{
+  font-size: clamp(2rem, 3vw, 4rem);
 }
 
