@@ -29,6 +29,15 @@
   .section-title{
     @apply section-title-font-size font-bold font-jakarta text-text_color;
   }
+  .btn{
+    @apply text-lg border-2 text-black shadow-sm rounded-md duration-200;
+  }
+  .primary-btn{
+    @apply border-primary_color bg-primary_color text-white hover:bg-transparent shadow-secondary_color hover:text-primary_color;
+  }
+  .secondary-btn{
+    @apply border-btn_hover_color bg-transparent  hover:bg-btn_hover_color shadow-primary_color;
+  }
 }
 
 .card-shadow {
