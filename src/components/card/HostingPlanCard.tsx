@@ -15,7 +15,7 @@ const HostingPlanCard = ({
     <div
       className={`card-shadow   ${
         category === "Reseller Hosting" ? " rounded-t-none " : "rounded-b-md "
-      } rounded-md h-full  border-primary_color/30 border`}
+      } rounded-md h-full hover:-translate-y-5 hover:bg-primary_color/20 duration-500 relative  border-primary_color/30 border`}
     >
       {category === "Reseller Hosting" ? (
         <div className="bg-primary_color pt-[3px] leading-10 overflow-hidden z-10 relative h-[40px] text-center flex items-center justify-center  -mt-10 card-shadow border-primary_color/30 border-t border-r border-l rounded-t-md">
@@ -26,7 +26,7 @@ const HostingPlanCard = ({
       ) : (
         <div></div>
       )}
-      <div className="px-5 py-8 z-20 h-full  flex flex-col">
+      <div className="px-5 py-8 z-20 h-full  flex flex-col ">
         <div className="flex flex-col gap-3 grow h-full ">
           <h2 className="font-jakarta text-2xl sm:text-3xl font-bold text-text_color">
             {category}
@@ -74,8 +74,13 @@ const HostingPlanCard = ({
                 </li>
               ))}
         </ul>
-        <div className="flex justify-center pt-4 duration-150 text-base font-medium hover:text-primary_color">
-          <button onClick={() => setIsOpen(!isOpen)}>More Fetuses</button>
+        <div className="text-center pt-4  text-base font-medium ">
+          <button
+            className="hover:text-primary_color duration-150 text-black"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            More Fetuses
+          </button>
         </div>
       </div>
     </div>

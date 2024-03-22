@@ -29,7 +29,7 @@ const HostingPlan = async () => {
       <div className="custom-container">
         <div className="text-center flex flex-col justify-center items-center gap-2">
           <h2 className="section-title">Choose Hosting Plan</h2>
-          <p className="w-[40%]">
+          <p className="sm:w-[40%] w-full">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, esse
             illum neque beatae at mollitia.
           </p>
