@@ -1,5 +1,8 @@
+"use client";
 import { HostingPlanData } from "@/utility/dataTypes";
 import Link from "next/link";
+import { useState } from "react";
+import Markdown from "react-markdown";
 
 const HostingPlanCard = ({
   category,
@@ -7,23 +10,12 @@ const HostingPlanCard = ({
   price,
   main_features,
 }: HostingPlanData) => {
-  const {
-    storage = undefined,
-    bandWidth = undefined,
-    support = undefined,
-    email = undefined,
-    ssl = undefined,
-    freeDomain = undefined,
-    dataTransfer = undefined,
-    security = undefined,
-    dataBase = undefined,
-    speed = undefined,
-  } = main_features;
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div
       className={`card-shadow   ${
-        category === "Reseller Hosting" ? " rounded-t-none" : "rounded-b-md "
-      } rounded-md min-h-[200px]  border-primary_color/30 border`}
+        category === "Reseller Hosting" ? " rounded-t-none " : "rounded-b-md "
+      } rounded-md h-full  border-primary_color/30 border`}
     >
       {category === "Reseller Hosting" ? (
         <div className="bg-primary_color pt-[3px] leading-10 overflow-hidden z-10 relative h-[40px] text-center flex items-center justify-center  -mt-10 card-shadow border-primary_color/30 border-t border-r border-l rounded-t-md">
@@ -34,14 +26,14 @@ const HostingPlanCard = ({
       ) : (
         <div></div>
       )}
-      <div className="px-5 py-8 z-20">
-        <div className="flex flex-col gap-3 ">
-          <h2 className="font-jakarta text-3xl font-bold text-text_color">
+      <div className="px-5 py-8 z-20 h-full  flex flex-col">
+        <div className="flex flex-col gap-3 grow h-full ">
+          <h2 className="font-jakarta text-2xl sm:text-3xl font-bold text-text_color">
             {category}
           </h2>
           <p className="font-inter text-sm font-normal">{description}</p>
         </div>
-        <div className=" pt-4 pb-10 border-b border-b-secondary_color/30">
+        <div className=" h-full pt-4 pb-10 border-b border-b-secondary_color/30">
           <h1 className="text-4xl font-medium font-jakarta text-primary_color">
             <span className="text-base  text-text_color">TK</span>
             <span> {price}/</span>
@@ -61,17 +53,30 @@ const HostingPlanCard = ({
             </Link>
           </div>
         </div>
-        <ul className="mt-10">
-          <li className="flex items-center gap-1">
-            <span className="text-primary_color">
-              <CheckIcon />
-            </span>
-            <p className="text-base text-text_color">
-              <span className="font-bold">{storage?.[0]} </span>
-              {storage?.[1]}
-            </p>
-          </li>
+        <ul className="mt-10  h-full  text-base text-text_color flex flex-col gap-3  ">
+          {isOpen
+            ? main_features?.map((item, idx) => (
+                <li
+                  style={{ borderBottom: "1px dashed black" }}
+                  key={idx}
+                  className="flex items-center gap-1 text-base text-text_color"
+                >
+                  <CheckIcon /> <Markdown>{item}</Markdown>
+                </li>
+              ))
+            : main_features?.slice(0, 6).map((item, idx) => (
+                <li
+                  style={{ borderBottom: "1px dashed black" }}
+                  key={idx}
+                  className="flex items-center gap-1 text-base text-text_color"
+                >
+                  <CheckIcon /> <Markdown>{item}</Markdown>
+                </li>
+              ))}
         </ul>
+        <div className="flex justify-center pt-4 duration-150 text-base font-medium hover:text-primary_color">
+          <button onClick={() => setIsOpen(!isOpen)}>More Fetuses</button>
+        </div>
       </div>
     </div>
   );
@@ -85,7 +90,7 @@ const CheckIcon = () => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="w-5 h-5"
+      className="w-5 h-5 text-primary_color"
     >
       <path
         strokeLinecap="round"
