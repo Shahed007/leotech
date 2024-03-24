@@ -11,7 +11,12 @@ import other2 from "@/assets/outherMegaMenu/08.svg";
 import other3 from "@/assets/outherMegaMenu/16.svg";
 import other4 from "@/assets/outherMegaMenu/21.svg";
 
-const hostingMegaMenu: {name: string, tag: string, path: string, icon: string}[] = [
+const hostingMegaMenu: {
+  name: string;
+  tag: string;
+  path: string;
+  icon: string;
+}[] = [
   {
     name: "Shared Hosting",
     tag: "Manage Shared Hosting",
@@ -61,7 +66,12 @@ const hostingMegaMenu: {name: string, tag: string, path: string, icon: string}[]
     icon: hostingIcon8,
   },
 ];
-const othersMegaMenu: {name: string, tag: string, path: string, icon: string}[] = [
+const othersMegaMenu: {
+  name: string;
+  tag: string;
+  path: string;
+  icon: string;
+}[] = [
   {
     name: "About Us",
     tag: "Get Know About Leo Technology",
@@ -88,7 +98,7 @@ const othersMegaMenu: {name: string, tag: string, path: string, icon: string}[] 
   },
 ];
 
-const domainDropDown: {name: string, path: string}[] = [
+const domainDropDown: { name: string; path: string }[] = [
   {
     name: "Domain Checker",
     path: "domain-checker",
@@ -102,12 +112,20 @@ const domainDropDown: {name: string, path: string}[] = [
     path: "domain-register",
   },
   {
-    name: "Whois",
-    path: "whois",
+    name: "Free Domain",
+    path: "free-domain",
+  },
+  {
+    name: "XYZ Domain",
+    path: "xyz-domain",
+  },
+  {
+    name: "WHOIS Lookup",
+    path: "whoIs-lookup",
   },
 ];
 
-const technologyDropDown: {name: string, path: string}[] = [
+const technologyDropDown: { name: string; path: string }[] = [
   {
     name: "Technology",
     path: "technology",
@@ -117,7 +135,7 @@ const technologyDropDown: {name: string, path: string}[] = [
     path: "data-center",
   },
 ];
-const HelpCenter: {name: string, path: string}[] = [
+const HelpCenter: { name: string; path: string }[] = [
   {
     name: "FAQ",
     path: "faq",
@@ -131,9 +149,19 @@ const HelpCenter: {name: string, path: string}[] = [
     path: "contact",
   },
   {
+    name: "Tutorials",
+    path: "tutorials",
+  },
+  {
     name: "Knowledgebase",
     path: "Knowledgebase",
   },
 ];
 
-export {hostingMegaMenu, othersMegaMenu, domainDropDown, technologyDropDown, HelpCenter}
+export {
+  hostingMegaMenu,
+  othersMegaMenu,
+  domainDropDown,
+  technologyDropDown,
+  HelpCenter,
+};

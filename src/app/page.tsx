@@ -1,5 +1,6 @@
 import Hero from "@/components/hero/Hero";
 import HostingSolutions from "@/ui/home/HostingSolutions/HostingSolutions";
+import AllInWebsiteSolution from "@/ui/home/allInWebsiteSolution/AllInWebsiteSolution";
 import HostingPlan from "@/ui/home/hostingPlan/HostingPlan";
 import { hostingPlans } from "@/utility/fetchData";
 
@@ -16,6 +17,7 @@ export default async function Home() {
       <main className="font-inter">
         <HostingSolutions />
         <HostingPlan hosting={hosting} />
+        <AllInWebsiteSolution />
       </main>
     </>
   );

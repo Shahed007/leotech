@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/ui/shared/navbar/Navbar";
-
-
+import Footer from "@/ui/shared/footer/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -29,10 +28,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${plusJakarta.variable} overflow-x-hidden`}
+        className={`${inter.variable} ${plusJakarta.variable} text-text_color overflow-x-hidden`}
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

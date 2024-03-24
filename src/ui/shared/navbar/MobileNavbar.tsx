@@ -51,7 +51,7 @@ const MobileNavbar = ({
             </svg>
           </button>
         </div>
-        <ul className="text-white text-base font-medium px-4 gap-4 flex flex-col ">
+        <ul className="text-white text-base overflow-auto font-medium px-4 gap-4 flex flex-col ">
           <li className="border-b border-gray-400 pb-1">
             <Link href="/">Home</Link>
           </li>

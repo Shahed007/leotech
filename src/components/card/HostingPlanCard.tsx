@@ -1,15 +1,15 @@
-
 import { HostingPlanData } from "@/utility/dataTypes";
 import Link from "next/link";
 import { useState } from "react";
 import Markdown from "react-markdown";
+import CheckIcon from "../icon/CheckIcon";
 
 const HostingPlanCard = ({
   category,
   description,
   price,
   main_features,
-  isClicked
+  isClicked,
 }: HostingPlanData) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -37,13 +37,17 @@ const HostingPlanCard = ({
         <div className=" h-full pt-4 pb-10 border-b border-b-secondary_color/30">
           <h1 className="text-4xl font-medium font-jakarta text-primary_color">
             <span className="text-base  text-text_color">TK</span>
-            {
-              isClicked ? 
-              <span> {(price * 12 * 0.8).toFixed(0) }/</span>
-              :
-              <span> {price}/</span>
-            }
-            <span className="text-text_color text-base ">Month</span>
+            {isClicked ? (
+              <>
+                <span> {(price * 12 * 0.8).toFixed(0)}/</span>
+                <span className="text-text_color text-base ">Yearly</span>
+              </>
+            ) : (
+              <>
+                <span> {price}/</span>
+                <span className="text-text_color text-base ">Month</span>
+              </>
+            )}
           </h1>
 
           <div className="w-full mt-8">
@@ -90,25 +94,6 @@ const HostingPlanCard = ({
         </div>
       </div>
     </div>
-  );
-};
-
-const CheckIcon = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="w-5 h-5 text-primary_color"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="m4.5 12.75 6 6 9-13.5"
-      />
-    </svg>
   );
 };
 

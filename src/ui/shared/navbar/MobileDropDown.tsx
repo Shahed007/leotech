@@ -43,7 +43,7 @@ const MobileDropDown = ({ title, menuNumber, open, handleDropDown, item }:   Dro
                 } ? 'border border-secondary_color shadow-sm p-1 rounded':''`}
               >
                 <div className={`${subItem.icon ? "block" : "hidden"}`}>
-                  <Image src={subItem.icon} alt={subItem.name} />
+                  <Image className="h-5 w-5" src={subItem.icon} alt={subItem.name} />
                 </div>
                 <div>
                   <h3 className="text-base font-medium">{subItem.name}</h3>

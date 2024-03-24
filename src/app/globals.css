@@ -60,6 +60,6 @@
 }
 
 .section-title-font-size{
-  font-size: clamp(2rem, 3vw, 4rem);
+  font-size: clamp(1.8rem, 3vw, 4rem);
 }
 
