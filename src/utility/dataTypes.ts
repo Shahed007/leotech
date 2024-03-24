@@ -3,4 +3,5 @@ export type HostingPlanData = {
   description: string;
   price: number;
   main_features: string[];
+  isClicked?: boolean;
 };

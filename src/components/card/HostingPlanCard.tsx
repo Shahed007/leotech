@@ -1,4 +1,4 @@
-"use client";
+
 import { HostingPlanData } from "@/utility/dataTypes";
 import Link from "next/link";
 import { useState } from "react";
@@ -9,6 +9,7 @@ const HostingPlanCard = ({
   description,
   price,
   main_features,
+  isClicked
 }: HostingPlanData) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -36,7 +37,12 @@ const HostingPlanCard = ({
         <div className=" h-full pt-4 pb-10 border-b border-b-secondary_color/30">
           <h1 className="text-4xl font-medium font-jakarta text-primary_color">
             <span className="text-base  text-text_color">TK</span>
-            <span> {price}/</span>
+            {
+              isClicked ? 
+              <span> {(price * 12 * 0.8).toFixed(0) }/</span>
+              :
+              <span> {price}/</span>
+            }
             <span className="text-text_color text-base ">Month</span>
           </h1>
 

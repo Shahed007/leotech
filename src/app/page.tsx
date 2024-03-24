@@ -1,8 +1,12 @@
 import Hero from "@/components/hero/Hero";
 import HostingSolutions from "@/ui/home/HostingSolutions/HostingSolutions";
 import HostingPlan from "@/ui/home/hostingPlan/HostingPlan";
+import { hostingPlans } from "@/utility/fetchData";
 
-export default function Home() {
+export default async function Home() {
+  const hosting = await hostingPlans(
+    "https://raw.githubusercontent.com/Shahed007/asets/main/hosting_plan.json"
+  );
   return (
     <>
       <Hero
@@ -11,7 +15,7 @@ export default function Home() {
       />
       <main className="font-inter">
         <HostingSolutions />
-        <HostingPlan />
+        <HostingPlan hosting={hosting} />
       </main>
     </>
   );
