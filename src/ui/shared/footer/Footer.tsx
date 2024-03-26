@@ -9,6 +9,14 @@ import React from "react";
 import { FaFacebook } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaYoutube } from "react-icons/fa";
+import CopyRight from "./CopyRight";
+import payment1 from "@/assets/payment-support/visa.png";
+import payment2 from "@/assets/payment-support/paypal.png";
+import payment3 from "@/assets/payment-support/master-card.png";
+import payment4 from "@/assets/payment-support/american-express.png";
+import payment5 from "@/assets/payment-support/BKash-Icon-Logo.wine.svg";
+import payment6 from "@/assets/payment-support/Nagad-Vertical-Logo.wine.svg";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -169,17 +177,17 @@ const Footer = () => {
             </div>
           </form>
           <ul className="flex justify-center gap-2 text-lg">
-            <li className="h-10 w-10 flex rounded-md justify-center items-center text-white bg-secondary_color shadow-sm shadow-secondary_color border border-secondary_color">
+            <li className="h-10 w-10 hover:bg-white/10 duration-150 flex rounded-md justify-center items-center text-white bg-secondary_color shadow-sm shadow-secondary_color border border-secondary_color">
               <Link href="#">
                 <FaFacebook />
               </Link>
             </li>
-            <li className="h-10 w-10 flex rounded-md justify-center items-center text-white bg-secondary_color shadow-sm shadow-secondary_color border border-secondary_color">
+            <li className="h-10 w-10 hover:bg-white/10 duration-150 flex rounded-md justify-center items-center text-white bg-secondary_color shadow-sm shadow-secondary_color border border-secondary_color">
               <Link href="#">
                 <AiFillInstagram />
               </Link>
             </li>
-            <li className="h-10 w-10 flex rounded-md justify-center items-center text-white bg-secondary_color shadow-sm shadow-secondary_color border border-secondary_color">
+            <li className="h-10 w-10 hover:bg-white/10 duration-150 flex rounded-md justify-center items-center text-white bg-secondary_color shadow-sm shadow-secondary_color border border-secondary_color">
               <Link href="#">
                 <FaYoutube />
               </Link>
@@ -187,7 +195,43 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="py-4 bg-white"></div>
+      <div className="py-4  bg-white border-t-2 border-t-secondary_color  ">
+        <div className="custom-container text-text_color flex flex-col xl:gap-0 gap-6 xl:flex-row  justify-between items-center">
+          <CopyRight />
+          <div className="grid grid-cols-6 gap-4">
+            <Image
+              className="xl:h-12 xl:w-12  sm:h-8 object-cover"
+              src={payment1}
+              alt="visa"
+            />
+            <Image
+              className="xl:h-12 xl:w-12  sm:h-8 object-cover"
+              src={payment2}
+              alt="visa"
+            />
+            <Image
+              className="xl:h-12 xl:w-12  sm:h-8 object-cover"
+              src={payment3}
+              alt="visa"
+            />
+            <Image
+              className="xl:h-12 xl:w-12  sm:h-8 object-cover"
+              src={payment4}
+              alt="visa"
+            />
+            <Image
+              className="xl:h-12 xl:w-12  sm:h-8 object-cover"
+              src={payment5}
+              alt="visa"
+            />
+            <Image
+              className="xlh-12 xl:w-12  sm:h-8 object-cover"
+              src={payment6}
+              alt="visa"
+            />
+          </div>
+        </div>
+      </div>
     </footer>
   );
 };
