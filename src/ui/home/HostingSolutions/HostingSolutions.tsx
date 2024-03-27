@@ -90,7 +90,7 @@ const HostingSolutions = () => {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-7 mt-12">
-          {hostingSolutions.map((item, idx) => (
+          {hostingSolutions.slice(0, 3).map((item, idx) => (
             <div key={idx} className="h-full ">
               <ServiceCard {...item} />
             </div>

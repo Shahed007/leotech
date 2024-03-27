@@ -1,8 +1,6 @@
-export const websiteSolution: {
-  list: string;
-  tolTip?: string;
-  tolTipId?: string;
-}[] = [
+import { bannerSection } from "./dataTypes";
+
+export const websiteSolution: bannerSection[] = [
   {
     list: "Manage up to 100 websites.",
   },
@@ -23,5 +21,17 @@ export const websiteSolution: {
   },
   {
     list: "Launch websites quickly with our Website Builder.",
+  },
+];
+
+export const websiteSpeed: bannerSection[] = [
+  {
+    list: "Maximize website loading speed with LiteSpeed Web Server technology.",
+  },
+  {
+    list: "Enjoy optimized performance with advanced cache solutions.",
+  },
+  {
+    list: "Boost Response Times by up to 3x with Object Caching",
   },
 ];

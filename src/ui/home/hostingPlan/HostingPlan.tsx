@@ -20,7 +20,7 @@ const HostingPlan = ({ hosting }: Props) => {
   };
 
   return (
-    <section className="py-[120px] bg-gradient-to-r from-gray-50 to-primary_color/20">
+    <section className="py-[120px] section-bg">
       <div className="custom-container">
         <div className="text-center flex flex-col justify-center items-center gap-2">
           <h2 className="section-title">Choose Hosting Plan</h2>

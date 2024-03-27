@@ -26,26 +26,28 @@
   .section-padding {
     @apply lg:py-[120px] md:py-20 py-[60px];
   }
-  .section-title{
+  .section-title {
     @apply section-title-font-size font-bold font-jakarta text-text_color;
   }
-  .btn{
+  .btn {
     @apply text-lg border-2 text-black shadow-sm rounded-md duration-200;
   }
-  .primary-btn{
+  .primary-btn {
     @apply border-primary_color bg-primary_color text-white hover:bg-transparent shadow-secondary_color hover:text-primary_color;
   }
-  .secondary-btn{
+  .secondary-btn {
     @apply border-btn_hover_color bg-transparent  hover:bg-btn_hover_color shadow-primary_color;
+  }
+  .section-bg {
+    @apply bg-gradient-to-r from-gray-50 to-primary_color/20;
   }
 }
 
 .card-shadow {
-  
   box-shadow: 6px 6px 12px #cecece, -6px -6px 12px #f2f2f2;
 }
 
-.card-gradient{
+.card-gradient {
   background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
 }
 
@@ -59,7 +61,6 @@
   font-size: clamp(2rem, 4vw, 3.5rem);
 }
 
-.section-title-font-size{
+.section-title-font-size {
   font-size: clamp(1.8rem, 3vw, 4rem);
 }
-
