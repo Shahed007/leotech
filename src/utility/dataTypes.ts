@@ -19,3 +19,10 @@ export type timeLineDataType = {
   description: string;
   icon: StaticImageData;
 };
+
+export type testimonialDataTypes = {
+  name: string;
+  position: string;
+  image: StaticImageData;
+  description: string;
+};
