@@ -10,12 +10,14 @@ const SectionServices = () => {
           <ServiceCard key={idx} {...item} />
         ))}
       </div>
-      <div className="flex justify-center items-center mt-8 custom-container">
-        <div className="px-4 sm:text-base text-sm font-normal lg:justify-start sm:flex-row flex-col flex items-center gap-2 py-3 text-black rounded-md bg-secondary_color/40 shadow-sm shadow-secondary_color/40 border border-secondary_color/40 backdrop-blur-md font-jakarta">
-          <span className="sm:w-full  ">Looking for a hosting Services?</span>
-          <Link href="services" className="underline ">
-            Click Now
-          </Link>
+      <div className="flex justify-center  items-center mt-8 max-w-xl mx-auto">
+        <div className="px-4  sm:text-base text-sm font-normal lg:justify-start sm:flex-row flex-col flex items-center gap-2 py-3 text-black rounded-md bg-secondary_color/40 shadow-sm shadow-secondary_color/40 border border-secondary_color/40 backdrop-blur-md font-jakarta">
+          <p className="  ">Looking for a hosting Services?</p>
+          <div>
+            <Link href="services" className="underline text-nowrap">
+              Click Now
+            </Link>
+          </div>
         </div>
       </div>
     </section>
