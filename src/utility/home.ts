@@ -35,3 +35,10 @@ export const websiteSpeed: bannerSection[] = [
     list: "Boost Response Times by up to 3x with Object Caching",
   },
 ];
+
+export const sharedHosting: string[] = [
+  "Cost-effectiveness",
+  "Ease of use",
+  "Resource sharing",
+  "Technical support",
+];
