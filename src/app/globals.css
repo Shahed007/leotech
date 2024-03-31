@@ -38,6 +38,9 @@
   .secondary-btn {
     @apply border-btn_hover_color bg-transparent  hover:bg-btn_hover_color shadow-primary_color;
   }
+  .accent-btn{
+    @apply border-primary_color bg-transparent hover:bg-primary_color shadow-primary_color hover:text-white text-primary_color;
+  }
   .section-bg {
     @apply bg-gradient-to-r from-gray-50 to-primary_color/20;
   }

@@ -32,3 +32,4 @@ export type accordionDataTypes = {
   title: string;
   description: string;
 };
+

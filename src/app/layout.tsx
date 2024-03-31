@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${plusJakarta.variable} text-text_color overflow-x-hidden`}
+        className={`${inter.variable} ${plusJakarta.variable} text-text_color overflow-x-hidden relative`}
       >
         <Navbar />
         {children}
