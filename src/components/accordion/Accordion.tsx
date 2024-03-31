@@ -1,6 +1,3 @@
-import { accordionDataTypes } from "@/utility/dataTypes";
-import { Dispatch, SetStateAction } from "react";
-
 type accordionFunctional = {
   id: number;
   title: string;

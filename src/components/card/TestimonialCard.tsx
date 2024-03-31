@@ -16,7 +16,7 @@ const TestimonialCard = ({
           src={quotationMark}
           alt="quotation mark"
         />
-        <p>{description}</p>
+        <p className="sm:text-base text-sm">{description}</p>
         <div className="flex justify-end mt-2">
           <Image
             className="h-8 w-8 mb-2 relative rotate-180"

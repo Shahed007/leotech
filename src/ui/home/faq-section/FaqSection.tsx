@@ -5,12 +5,12 @@ import Image from "next/image";
 const FaqSection = () => {
   return (
     <section className="pb-[120px] ">
-      <div className="custom-container flex ">
+      <div className="custom-container flex lg:gap-0 gap-8 md:flex-row flex-col">
         <div className="flex-1 ">
           <h2 className="section-title leading-10 mb-5">
             Got questions? Well, <br /> we&apos;ve got answers.
           </h2>
-          <p className="w-[60%] mb-10">
+          <p className="lg:w-[60%] mb-10">
             From 24/7 support that acts as your extended team to incredibly fast
             website performance
           </p>
