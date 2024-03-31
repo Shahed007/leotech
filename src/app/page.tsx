@@ -9,6 +9,7 @@ import allInWebsiteSolution from "@/assets/images/all-in-one-website-solution.jp
 import websiteSpeedImage from "@/assets/images/website-speed.png";
 import WhyChoseUs from "@/ui/home/whayChoseUs/WhyChoseUs";
 import TestimonialSection from "@/ui/home/testimonialSection/TestimonialSection";
+import FaqSection from "@/ui/home/faq-section/FaqSection";
 
 export default async function Home() {
   const hosting = await hostingPlans(
@@ -45,6 +46,8 @@ export default async function Home() {
         <WhyChoseUs />
         {/* Home Testimonial section */}
         <TestimonialSection />
+        {/* FAQ Section */}
+        <FaqSection />
       </main>
     </>
   );

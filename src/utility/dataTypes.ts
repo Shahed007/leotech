@@ -26,3 +26,9 @@ export type testimonialDataTypes = {
   image: StaticImageData;
   description: string;
 };
+
+export type accordionDataTypes = {
+  id: number,
+  title: string;
+  description: string;
+};
