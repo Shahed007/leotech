@@ -12,9 +12,9 @@ const TestimonialSection = () => {
       <div className="custom-container flex justify-center mt-6">
         <Link
           href="/"
-          className="font-jakarta underline text-lg font-medium text-primary_color"
+          className="font-jakarta px-3 py-2 text-lg font-medium btn accent-btn"
         >
-          See More
+          Brows more client stories
         </Link>
       </div>
     </section>

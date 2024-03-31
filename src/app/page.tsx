@@ -10,6 +10,7 @@ import websiteSpeedImage from "@/assets/images/website-speed.png";
 import WhyChoseUs from "@/ui/home/whayChoseUs/WhyChoseUs";
 import TestimonialSection from "@/ui/home/testimonialSection/TestimonialSection";
 import FaqSection from "@/ui/home/faq-section/FaqSection";
+import JoinNow from "@/components/joinNow/JoinNow";
 
 export default async function Home() {
   const hosting = await hostingPlans(
@@ -48,6 +49,8 @@ export default async function Home() {
         <TestimonialSection />
         {/* FAQ Section */}
         <FaqSection />
+        {/* Join Now Section */}
+        <JoinNow />
       </main>
     </>
   );
