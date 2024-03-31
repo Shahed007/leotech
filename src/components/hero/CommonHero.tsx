@@ -2,7 +2,8 @@ import commonHero from "@/assets/images/comon-hero.jpg";
 import Image from "next/image";
 import commonHeroIntroImage from "@/assets/images/common-hero-intro-image1.png";
 import CheckIcon from "../icon/CheckIcon";
-import { sharedHosting } from "@/utility/sharedHosting";
+import { sharedHosting } from "@/utility/home";
+
 const CommonHero = (
   {
     title = 'Shared',
